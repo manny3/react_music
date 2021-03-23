@@ -14,5 +14,9 @@ export default function useAuth(code) {
       .then(res => {
         console.log(res.data);
       })
+      .catch((err)=>{
+        console.log(err);
+        window.location = "/"
+      })
   },[code])
 }
